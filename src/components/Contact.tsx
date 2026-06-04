@@ -35,14 +35,14 @@ export default function Contact() {
 
           <div className="mt-10 flex gap-4">
             <a
-              href="#"
+              href="https://github.com/trailovic"
               className="rounded-xl border border-white/10 p-3 text-slate-300 transition hover:border-violet-400 hover:text-violet-400"
             >
               <FaGithub size={22} />
             </a>
 
             <a
-              href="#"
+              href="https://www.linkedin.com/in/trailovicluka/"
               className="rounded-xl border border-white/10 p-3 text-slate-300 transition hover:border-violet-400 hover:text-violet-400"
             >
               <FaLinkedin size={22} />
@@ -100,7 +100,7 @@ export default function Contact() {
 
             <button
               type="button"
-              className="inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-violet-600 to-blue-600 px-6 py-3 font-semibold text-white transition hover:scale-[1.02]"
+              className="inline-flex items-center justify-center gap-2 rounded-xl bg-linear-to-r from-violet-600 to-blue-600 px-6 py-3 font-semibold text-white transition hover:scale-[1.02]"
             >
               Send Message
             </button>

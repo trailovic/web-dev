@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="text-center md:text-left">
           <a
             href="#home"
-            className="bg-gradient-to-r from-violet-500 to-blue-500 bg-clip-text text-2xl font-black text-transparent"
+            className="bg-linear-to-r from-violet-500 to-blue-500 bg-clip-text text-2xl font-black text-transparent"
           >
             Luka Trailović
           </a>
@@ -19,11 +19,11 @@ export default function Footer() {
         </div>
 
         <div className="flex items-center gap-5 text-slate-400">
-          <a href="#" className="transition hover:text-violet-400">
+          <a href="https://github.com/trailovic" className="transition hover:text-violet-400">
             <FaGithub size={22} />
           </a>
 
-          <a href="#" className="transition hover:text-violet-400">
+          <a href="https://www.linkedin.com/in/trailovicluka/" className="transition hover:text-violet-400">
             <FaLinkedin size={22} />
           </a>
 

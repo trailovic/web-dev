@@ -2,31 +2,31 @@ import { ArrowUpRight } from 'lucide-react';
 
 const projects = [
   {
-    title: 'IT Support Portfolio',
+    title: 'IT Technician Portfolio',
+    image: '/it-portfolio.png',
     description:
-      'A responsive portfolio website for an IT Support Technician, built with React, Vite, Tailwind CSS, and deployed with Vercel.',
-    image: '/project-it-portfolio.png',
-    tags: ['React', 'Vite', 'Tailwind', 'Vercel'],
+      'A professional portfolio website built for showcasing IT support experience, technical skills, project work, and a downloadable résumé.',
+    tags: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'Vercel'],
     liveUrl: 'https://it.trailovic.dev',
-    codeUrl: '#',
+    codeUrl: 'https://github.com/trailovic/it-tech.git',
   },
   {
-    title: 'Natural Products Storefront',
+    title: 'Jot: A Notion Clone',
+    image: '/jot.png',
     description:
-      'A modern ecommerce storefront concept for natural beauty and hygiene products with premium Mediterranean-inspired design.',
-    image: '/project-storefront.png',
-    tags: ['React', 'Shopify', 'Tailwind', 'UI Design'],
-    liveUrl: '#',
-    codeUrl: '#',
+      'A productivity-focused Notion-style application for creating, organizing, and managing notes and documents with a modern user interface.',
+    tags: ['Next.js', 'TypeScript', 'App UI', 'Productivity', 'Frontend'],
+    liveUrl: 'https://jot-mu.vercel.app/',
+    codeUrl: 'https://github.com/trailovic/jot-app.git',
   },
   {
-    title: 'PDF Schedule Generator',
+    title: 'Fjord Import Landing Page',
+    image: '/fjord-import.png',
     description:
-      'A simple tool concept that turns structured form input into clean, printable PDF schedules for non-technical users.',
-    image: '/project-pdf-generator.png',
-    tags: ['React', 'Forms', 'PDF', 'UX'],
-    liveUrl: '#',
-    codeUrl: '#',
+      'A clean Scandinavian-style landing page for an import company, focused on trust, services, product categories, and B2B lead generation.',
+    tags: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'Landing Page'],
+    liveUrl: 'https://fjordimport.vercel.app/',
+    codeUrl: 'https://github.com/trailovic/fjordimport.git',
   },
 ];
 
@@ -36,7 +36,9 @@ export default function Projects() {
       <div className="mx-auto max-w-7xl">
         <div className="mb-14 flex flex-col justify-between gap-6 md:flex-row md:items-end">
           <div>
-            <p className="mb-3 font-semibold text-violet-400">Featured Work</p>
+            <p className="mb-3 font-semibold text-violet-400">
+              Featured Work
+            </p>
 
             <h2 className="max-w-2xl text-4xl font-black text-white">
               Projects that show how I build, solve, and ship.
@@ -44,8 +46,8 @@ export default function Projects() {
           </div>
 
           <p className="max-w-md text-lg leading-8 text-slate-400">
-            A selection of portfolio projects, experiments, and practical tools
-            focused on real-world usability.
+            A selected group of projects focused on real-world usability,
+            clean interfaces, and practical business value.
           </p>
         </div>
 
@@ -56,18 +58,25 @@ export default function Projects() {
               className="grid overflow-hidden rounded-3xl border border-white/10 bg-slate-950 shadow-2xl shadow-slate-950/40 lg:grid-cols-2"
             >
               <div
-                className={`min-h-72 bg-gradient-to-br from-violet-600/30 to-blue-600/20 p-6 ${
+                className={`overflow-hidden bg-slate-950 p-4 ${
                   index % 2 === 1 ? 'lg:order-2' : ''
                 }`}
               >
-                <div className="flex h-full items-center justify-center rounded-2xl border border-white/10 bg-slate-900/80 text-center">
-                  <div>
-                    <p className="text-sm uppercase tracking-[0.35em] text-violet-300">
-                      Project Preview
-                    </p>
-                    <h3 className="mt-4 text-3xl font-black text-white">
-                      {project.title}
-                    </h3>
+                <div className="overflow-hidden rounded-2xl border border-white/10 bg-slate-900">
+                  <div className="flex items-center gap-2 border-b border-white/10 px-4 py-3">
+                    <span className="h-3 w-3 rounded-full bg-red-500" />
+                    <span className="h-3 w-3 rounded-full bg-yellow-500" />
+                    <span className="h-3 w-3 rounded-full bg-green-500" />
+                  </div>
+
+                  <div className="relative aspect-video overflow-hidden">
+                    <img
+                      src={project.image}
+                      alt={`${project.title} screenshot`}
+                      className="h-full w-full object-cover transition duration-500 hover:scale-105"
+                    />
+
+                    <div className="absolute inset-0 bg-linear-to-t from-slate-950/30 via-transparent to-transparent" />
                   </div>
                 </div>
               </div>

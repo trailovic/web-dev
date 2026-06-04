@@ -29,7 +29,7 @@ export default function Hero() {
           <div className="mt-8 flex flex-wrap gap-4">
             <a
               href="#projects"
-              className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-violet-600 to-blue-600 px-6 py-3 font-semibold text-white shadow-lg shadow-blue-950/40 transition hover:scale-105"
+              className="inline-flex items-center gap-2 rounded-xl bg-linear-to-r from-violet-600 to-blue-600 px-6 py-3 font-semibold text-white shadow-lg shadow-blue-950/40 transition hover:scale-105"
             >
               View My Work
               <ArrowRight size={18} />
@@ -47,11 +47,11 @@ export default function Hero() {
           </div>
 
           <div className="mt-8 flex gap-5 text-slate-400">
-            <a href="#" className="transition hover:text-violet-400">
+            <a href="https://github.com/trailovic" className="transition hover:text-violet-400">
               <FaGithub size={22} />
             </a>
 
-            <a href="#" className="transition hover:text-violet-400">
+            <a href="https://www.linkedin.com/in/trailovicluka/" className="transition hover:text-violet-400">
               <FaLinkedin size={22} />
             </a>
 
