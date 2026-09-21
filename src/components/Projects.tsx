@@ -28,6 +28,15 @@ const projects = [
     liveUrl: 'https://fjordimport.vercel.app/',
     codeUrl: 'https://github.com/trailovic/fjordimport.git',
   },
+  {
+    title: 'Ajvar — Family Recipe Hub',
+    image: '/ajvar.png',
+    description:
+      'A family recipe hub for creating, discovering, and sharing recipes through personal collections and collaborative kitchens.',
+    tags: ['React', 'TypeScript', 'Supabase', 'Cloudflare D1', 'Drizzle ORM'],
+    liveUrl: 'https://ajvar.trailovicluka.workers.dev/',
+    codeUrl: 'https://github.com/trailovic/ajvar',
+  },
 ];
 
 export default function Projects() {
