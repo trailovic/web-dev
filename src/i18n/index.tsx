@@ -15,9 +15,9 @@ const DEFAULT_LOCALE = 'en';
 export type TranslationKey = keyof typeof en;
 
 export const localeConfig = {
-  en: { label: 'English', dir: 'ltr' },
-  nb: { label: 'Norsk', dir: 'ltr' },
-} as const satisfies Record<string, { label: string; dir: 'ltr' | 'rtl' }>;
+  en: { label: 'English', shortLabel: 'ENG', dir: 'ltr' },
+  nb: { label: 'Norsk', shortLabel: 'NO', dir: 'ltr' },
+} as const satisfies Record<string, { label: string; shortLabel: string; dir: 'ltr' | 'rtl' }>;
 
 export type Locale = keyof typeof localeConfig;
 
