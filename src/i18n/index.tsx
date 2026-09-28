@@ -7,6 +7,7 @@ import {
   type ReactNode,
 } from 'react';
 import en from './locales/en';
+import nb from './locales/nb';
 
 const STORAGE_KEY = 'trailovic.locale';
 const DEFAULT_LOCALE = 'en';
@@ -15,12 +16,14 @@ export type TranslationKey = keyof typeof en;
 
 export const localeConfig = {
   en: { label: 'English', dir: 'ltr' },
+  nb: { label: 'Norsk', dir: 'ltr' },
 } as const satisfies Record<string, { label: string; dir: 'ltr' | 'rtl' }>;
 
 export type Locale = keyof typeof localeConfig;
 
 export const translations = {
   en,
+  nb,
 } satisfies Record<Locale, Record<TranslationKey, string>>;
 
 const supportedLocales = Object.keys(localeConfig) as Locale[];
