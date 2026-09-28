@@ -9,32 +9,48 @@ import {
 import en from './locales/en';
 
 const STORAGE_KEY = 'trailovic.locale';
+const DEFAULT_LOCALE = 'en';
 
-export const translations = { en } as const;
-export type Locale = keyof typeof translations;
 export type TranslationKey = keyof typeof en;
 
-const supportedLocales = Object.keys(translations) as Locale[];
+export const localeConfig = {
+  en: { label: 'English', dir: 'ltr' },
+} as const satisfies Record<string, { label: string; dir: 'ltr' | 'rtl' }>;
+
+export type Locale = keyof typeof localeConfig;
+
+export const translations = {
+  en,
+} satisfies Record<Locale, Record<TranslationKey, string>>;
+
+const supportedLocales = Object.keys(localeConfig) as Locale[];
 
 function isLocale(value: string | null | undefined): value is Locale {
   return Boolean(value && supportedLocales.includes(value as Locale));
 }
 
 function getInitialLocale(): Locale {
-  if (typeof window === 'undefined') return 'en';
+  if (typeof window === 'undefined') return DEFAULT_LOCALE;
 
-  const savedLocale = window.localStorage.getItem(STORAGE_KEY);
-  if (isLocale(savedLocale)) return savedLocale;
+  try {
+    const savedLocale = window.localStorage.getItem(STORAGE_KEY);
+    if (isLocale(savedLocale)) return savedLocale;
+  } catch {
+    // Storage can be unavailable in restricted browsing contexts.
+  }
 
-  const browserLocale = window.navigator.language.split('-')[0];
-  return isLocale(browserLocale) ? browserLocale : 'en';
+  for (const browserLanguage of window.navigator.languages ?? [window.navigator.language]) {
+    const baseLocale = browserLanguage.split('-')[0];
+    if (isLocale(baseLocale)) return baseLocale;
+  }
+
+  return DEFAULT_LOCALE;
 }
 
 type Variables = Record<string, string | number>;
 
 function translate(locale: Locale, key: TranslationKey, variables?: Variables) {
-  const dictionary = translations[locale] ?? translations.en;
-  let value = dictionary[key] ?? translations.en[key];
+  let value = translations[locale][key] ?? translations[DEFAULT_LOCALE][key];
 
   if (variables) {
     for (const [name, replacement] of Object.entries(variables)) {
@@ -58,8 +74,14 @@ export function I18nProvider({ children }: { children: ReactNode }) {
   const [locale, setLocale] = useState<Locale>(getInitialLocale);
 
   useEffect(() => {
-    window.localStorage.setItem(STORAGE_KEY, locale);
+    try {
+      window.localStorage.setItem(STORAGE_KEY, locale);
+    } catch {
+      // The active language still works even when storage is unavailable.
+    }
+
     document.documentElement.lang = locale;
+    document.documentElement.dir = localeConfig[locale].dir;
     document.title = translate(locale, 'seo.title');
 
     const description = document.querySelector<HTMLMetaElement>('meta[name="description"]');
