@@ -11,6 +11,7 @@ import {
   SiExpress,
   SiMongodb,
 } from 'react-icons/si';
+import { useI18n } from '../i18n';
 
 const techStack = [
   { name: 'React', icon: FaReact },
@@ -24,6 +25,8 @@ const techStack = [
 ];
 
 export default function About() {
+  const { t } = useI18n();
+
   return (
     <section
       id="about"
@@ -31,40 +34,31 @@ export default function About() {
     >
       <div className="mx-auto grid max-w-7xl gap-14 lg:grid-cols-2">
         <div>
-          <p className="mb-3 font-semibold text-violet-400">About Me</p>
+          <p className="mb-3 font-semibold text-violet-400">{t('about.eyebrow')}</p>
 
           <h2 className="mb-6 text-4xl font-black text-white">
-            Building practical web experiences with clean code.
+            {t('about.title')}
           </h2>
 
           <div className="space-y-5 text-lg leading-8 text-slate-300">
-            <p>
-              I&apos;m a web developer based in Norway, focused on creating
-              modern, responsive, and useful web applications with React,
-              TypeScript, Tailwind CSS, and backend technologies.
-            </p>
-
-            <p>
-              I enjoy turning ideas into working products, designing clean user
-              interfaces, and building projects that are easy to maintain and
-              improve over time.
-            </p>
+            <p>{t('about.paragraph1')}</p>
+            <p>{t('about.paragraph2')}</p>
           </div>
 
           <a
             href="#projects"
             className="mt-8 inline-flex items-center gap-2 rounded-xl border border-white/15 px-5 py-3 font-semibold text-white transition hover:border-violet-400 hover:text-violet-300"
           >
-            View Projects
+            {t('about.viewProjects')}
             <ArrowRight size={18} />
           </a>
         </div>
 
         <div id="skills">
-          <p className="mb-3 font-semibold text-violet-400">Tech Stack</p>
+          <p className="mb-3 font-semibold text-violet-400">{t('about.techStack')}</p>
 
           <h2 className="mb-8 text-4xl font-black text-white">
-            Tools I Work With
+            {t('about.toolsTitle')}
           </h2>
 
           <div className="grid gap-4 sm:grid-cols-2">
