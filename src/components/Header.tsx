@@ -25,6 +25,10 @@ export default function Header() {
           </span>
         </a>
 
+        <div className="md:hidden">
+          <LanguageSwitcher compact />
+        </div>
+
         <nav className="hidden items-center gap-8 md:flex">
           {navItems.map((item) => (
             <a
