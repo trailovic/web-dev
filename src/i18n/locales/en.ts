@@ -1,5 +1,7 @@
 const en = {
   'language.label': 'Language',
+  'seo.title': 'Luka Trailović — Full-Stack Web Developer',
+  'seo.description': 'Portfolio of Luka Trailović, a full-stack web developer building modern, responsive, and useful digital products.',
   'nav.home': 'Home',
   'nav.about': 'About',
   'nav.skills': 'Skills',
