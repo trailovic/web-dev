@@ -1,9 +1,5 @@
 import { Languages } from 'lucide-react';
-import { useI18n, type Locale } from '../i18n';
-
-const localeNames: Record<Locale, string> = {
-  en: 'English',
-};
+import { localeConfig, useI18n, type Locale } from '../i18n';
 
 export default function LanguageSwitcher() {
   const { locale, locales, setLocale, t } = useI18n();
@@ -22,7 +18,7 @@ export default function LanguageSwitcher() {
       >
         {locales.map((item) => (
           <option key={item} value={item}>
-            {localeNames[item]}
+            {localeConfig[item].label}
           </option>
         ))}
       </select>
