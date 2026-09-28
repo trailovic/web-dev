@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { Check, ChevronDown, Languages } from 'lucide-react';
 import { localeConfig, useI18n, type Locale } from '../i18n';
 
-export default function LanguageSwitcher() {
+export default function LanguageSwitcher({ compact = false }: { compact?: boolean }) {
   const { locale, locales, setLocale, t } = useI18n();
   const [isOpen, setIsOpen] = useState(false);
   const [activeIndex, setActiveIndex] = useState(() => locales.indexOf(locale));
@@ -68,7 +68,7 @@ export default function LanguageSwitcher() {
           aria-hidden="true"
           className="text-violet-300 transition-colors group-hover:text-violet-200"
         />
-        <span>{localeConfig[locale].label}</span>
+        <span>{compact ? localeConfig[locale].shortLabel : localeConfig[locale].label}</span>
         <ChevronDown
           size={15}
           aria-hidden="true"
@@ -114,7 +114,7 @@ export default function LanguageSwitcher() {
                 }}
                 className={`flex w-full items-center justify-between gap-6 rounded-lg px-3 py-2.5 text-left text-sm font-medium outline-none transition ${selected ? 'bg-violet-500/15 text-violet-200' : 'text-slate-300 hover:bg-white/7 hover:text-white'} ${index === activeIndex ? 'ring-1 ring-inset ring-white/10' : ''}`}
               >
-                <span>{localeConfig[item].label}</span>
+                <span>{compact ? localeConfig[item].shortLabel : localeConfig[item].label}</span>
                 <Check
                   size={15}
                   aria-hidden="true"
