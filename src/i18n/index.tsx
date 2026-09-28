@@ -60,6 +60,10 @@ export function I18nProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     window.localStorage.setItem(STORAGE_KEY, locale);
     document.documentElement.lang = locale;
+    document.title = translate(locale, 'seo.title');
+
+    const description = document.querySelector<HTMLMetaElement>('meta[name="description"]');
+    description?.setAttribute('content', translate(locale, 'seo.description'));
   }, [locale]);
 
   const value = useMemo<I18nContextValue>(
