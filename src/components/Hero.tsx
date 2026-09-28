@@ -1,8 +1,11 @@
 import { ArrowRight, Download, Code2 } from 'lucide-react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { SiGmail } from 'react-icons/si';
+import { useI18n } from '../i18n';
 
 export default function Hero() {
+  const { t } = useI18n();
+
   return (
     <section
       id="home"
@@ -14,16 +17,15 @@ export default function Hero() {
       <div className="relative mx-auto grid max-w-7xl items-center gap-16 lg:grid-cols-2">
         <div>
           <p className="mb-4 text-xl font-bold text-violet-400">
-            Hi, I&apos;m Luka
+            {t('hero.greeting')}
           </p>
 
           <h1 className="max-w-2xl text-5xl font-black leading-tight text-white md:text-7xl">
-            Full-Stack Web Developer
+            {t('hero.title')}
           </h1>
 
           <p className="mt-6 max-w-xl text-lg leading-8 text-slate-300">
-            I build modern, responsive, and user-friendly web applications
-            that turn ideas into useful digital products.
+            {t('hero.description')}
           </p>
 
           <div className="mt-8 flex flex-wrap gap-4">
@@ -31,7 +33,7 @@ export default function Hero() {
               href="#projects"
               className="inline-flex items-center gap-2 rounded-xl bg-linear-to-r from-violet-600 to-blue-600 px-6 py-3 font-semibold text-white shadow-lg shadow-blue-950/40 transition hover:scale-105"
             >
-              View My Work
+              {t('hero.viewWork')}
               <ArrowRight size={18} />
             </a>
 
@@ -41,21 +43,21 @@ export default function Hero() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-xl border border-white/15 px-6 py-3 font-semibold text-white transition hover:border-violet-400 hover:text-violet-300"
             >
-              Download CV
+              {t('hero.downloadCv')}
               <Download size={18} />
             </a>
           </div>
 
           <div className="mt-8 flex gap-5 text-slate-400">
-            <a href="https://github.com/trailovic" className="transition hover:text-violet-400">
+            <a href="https://github.com/trailovic" className="transition hover:text-violet-400" aria-label="GitHub">
               <FaGithub size={22} />
             </a>
 
-            <a href="https://www.linkedin.com/in/trailovicluka/" className="transition hover:text-violet-400">
+            <a href="https://www.linkedin.com/in/trailovicluka/" className="transition hover:text-violet-400" aria-label="LinkedIn">
               <FaLinkedin size={22} />
             </a>
 
-            <a href="mailto:hello@trailovic.dev" className="transition hover:text-violet-400">
+            <a href="mailto:hello@trailovic.dev" className="transition hover:text-violet-400" aria-label="Email">
               <SiGmail size={22} />
             </a>
           </div>
@@ -88,7 +90,7 @@ export default function Hero() {
                   <span className="text-green-300">&apos;Node&apos;</span>],
                 </p>
                 <p className="pl-6">
-                  mission: <span className="text-green-300">&apos;Build useful things&apos;</span>,
+                  mission: <span className="text-green-300">&apos;{t('hero.codeMission')}&apos;</span>,
                 </p>
                 <p>{'};'}</p>
               </div>
@@ -97,8 +99,8 @@ export default function Hero() {
 
           <div className="absolute -bottom-8 -left-8 hidden rounded-2xl border border-white/10 bg-slate-900 p-5 shadow-xl md:block">
             <Code2 className="mb-3 text-violet-400" size={28} />
-            <p className="font-semibold text-white">Clean Code</p>
-            <p className="text-sm text-slate-400">Maintainable, scalable UI</p>
+            <p className="font-semibold text-white">{t('hero.cleanCode')}</p>
+            <p className="text-sm text-slate-400">{t('hero.cleanCodeDescription')}</p>
           </div>
         </div>
       </div>
