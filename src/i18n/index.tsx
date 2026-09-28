@@ -50,7 +50,7 @@ function getInitialLocale(): Locale {
 type Variables = Record<string, string | number>;
 
 function translate(locale: Locale, key: TranslationKey, variables?: Variables) {
-  let value = translations[locale][key] ?? translations[DEFAULT_LOCALE][key];
+  let value: string = translations[locale][key] ?? translations[DEFAULT_LOCALE][key];
 
   if (variables) {
     for (const [name, replacement] of Object.entries(variables)) {
