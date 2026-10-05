@@ -1,3 +1,5 @@
+import Showcase from './components/Showcase';
+
 import {
   Header,
   Hero,
@@ -15,6 +17,7 @@ export default function App() {
       <main>
         <Hero />
         <About />
+        <Showcase />
         <Projects />
         <Contact />
       </main>
