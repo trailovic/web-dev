@@ -26,7 +26,7 @@ const nb = {
   'about.techStack': 'Teknologier',
   'about.toolsTitle': 'Verktøy jeg jobber med',
 
-  "showcase.eyebrow": "Prøv selv",
+  "showcase.eyebrow": "Demo",
   "showcase.title": "Prøv det selv",
   "showcase.description": "Små interaksjoner. Gjennomtenkte løsninger. Utforsk hvordan jeg får et grensesnitt til å føles naturlig på et annet språk.",
   "showcase.demoTitle": "Ett grensesnitt, to språk",

@@ -26,7 +26,7 @@ const en = {
   'about.techStack': 'Tech Stack',
   'about.toolsTitle': 'Tools I Work With',
 
-  "showcase.eyebrow": "Try it yourself",
+  "showcase.eyebrow": "Demo",
   "showcase.title": "Try it yourself",
   "showcase.description": "Small interactions. Real product thinking. Explore how I make an interface feel at home in another language.",
   "showcase.demoTitle": "One interface, two languages",
