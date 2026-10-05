@@ -27,7 +27,7 @@ const nb = {
   'about.toolsTitle': 'Verktøy jeg jobber med',
 
   "showcase.eyebrow": "Prøv selv",
-  "showcase.title": "Bygget, ikke bare listet opp.",
+  "showcase.title": "Prøv det selv",
   "showcase.description": "Små interaksjoner. Gjennomtenkte løsninger. Utforsk hvordan jeg får et grensesnitt til å føles naturlig på et annet språk.",
   "showcase.demoTitle": "Ett grensesnitt, to språk",
   "showcase.instructions": "Bytt språk, endre navnet eller juster antall meldinger. Teksten og datoen tilpasser seg umiddelbart.",

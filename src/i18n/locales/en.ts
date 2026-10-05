@@ -27,7 +27,7 @@ const en = {
   'about.toolsTitle': 'Tools I Work With',
 
   "showcase.eyebrow": "Try it yourself",
-  "showcase.title": "Built, not just listed.",
+  "showcase.title": "Try it yourself",
   "showcase.description": "Small interactions. Real product thinking. Explore how I make an interface feel at home in another language.",
   "showcase.demoTitle": "One interface, two languages",
   "showcase.instructions": "Switch languages, change the name, or adjust the message count. The words and date adapt instantly.",
