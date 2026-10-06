@@ -7,7 +7,7 @@ export default function Contact() {
 
   return (
     <section id="contact" className="bg-slate-950 px-6 py-24">
-      <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-2">
+      <div className="mx-auto grid max-w-7xl gap-12 xl:grid-cols-2">
         <div>
           <p className="mb-3 font-semibold text-violet-400">{t('contact.eyebrow')}</p>
 

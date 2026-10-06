@@ -25,11 +25,11 @@ export default function Header() {
           </span>
         </a>
 
-        <div className="md:hidden">
+        <div className="xl:hidden">
           <LanguageSwitcher compact />
         </div>
 
-        <nav className="hidden items-center gap-8 md:flex">
+        <nav className="hidden items-center gap-8 xl:flex">
           {navItems.map((item) => (
             <a
               key={item.label}
@@ -41,7 +41,7 @@ export default function Header() {
           ))}
         </nav>
 
-        <div className="hidden items-center gap-4 md:flex">
+        <div className="hidden items-center gap-4 xl:flex">
           <LanguageSwitcher />
           <a
             href="#contact"

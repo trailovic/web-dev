@@ -27,8 +27,8 @@ export default function Showcase() {
         <h2 id={`${id}-heading`} className="text-4xl font-black text-white">{t('showcase.title')}</h2>
         <p className="mt-5 max-w-2xl text-lg leading-8 text-slate-300">{t('showcase.description')}</p>
 
-        <div className="mt-10 grid overflow-hidden rounded-3xl border border-white/10 bg-white/3 lg:grid-cols-2">
-          <div className="p-6 sm:p-8 lg:p-10">
+        <div className="mt-10 grid overflow-hidden rounded-3xl border border-white/10 bg-white/3 xl:grid-cols-2">
+          <div className="p-6 sm:p-8 xl:p-10">
             <Globe2 aria-hidden="true" className="mb-5 text-violet-400" size={30} />
             <h3 className="text-2xl font-bold text-white">{t('showcase.demoTitle')}</h3>
             <p className="mt-3 leading-7 text-slate-300">{t('showcase.instructions')}</p>
@@ -58,7 +58,7 @@ export default function Showcase() {
             <p className="mt-5 text-sm leading-6 text-slate-400">{t('showcase.note')}</p>
           </div>
 
-          <div className="flex min-w-0 flex-col justify-center border-t border-white/10 bg-gradient-to-br from-violet-500/10 to-slate-900 p-6 sm:p-8 lg:border-t-0 lg:border-l lg:p-10">
+          <div className="flex min-w-0 flex-col justify-center border-t border-white/10 bg-gradient-to-br from-violet-500/10 to-slate-900 p-6 sm:p-8 xl:border-t-0 xl:border-l xl:p-10">
             <p className="mb-4 text-xs font-semibold tracking-widest text-violet-300 uppercase">{t('showcase.preview')}</p>
             <div lang={demoLocale} className="rounded-2xl border border-white/15 bg-slate-950 p-6 shadow-xl sm:p-8">
               <div aria-live="polite" aria-atomic="true">
