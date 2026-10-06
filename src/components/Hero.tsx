@@ -9,18 +9,18 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative overflow-hidden px-6 pb-24 pt-28 md:pb-32 md:pt-36"
+      className="relative overflow-hidden px-6 pb-24 pt-28 xl:pb-32 xl:pt-36"
     >
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_75%_25%,rgba(124,58,237,0.28),transparent_35%)]" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_60%,rgba(37,99,235,0.16),transparent_30%)]" />
 
-      <div className="relative mx-auto grid max-w-7xl items-center gap-16 lg:grid-cols-2">
+      <div className="relative mx-auto grid max-w-7xl items-center gap-16 xl:grid-cols-2">
         <div>
           <p className="mb-4 text-xl font-bold text-violet-400">
             {t('hero.greeting')}
           </p>
 
-          <h1 className="max-w-2xl text-5xl font-black leading-tight text-white md:text-7xl">
+          <h1 className="max-w-2xl text-5xl font-black leading-tight text-white xl:text-7xl">
             {t('hero.title')}
           </h1>
 
@@ -97,7 +97,7 @@ export default function Hero() {
             </div>
           </div>
 
-          <div className="absolute -bottom-8 -left-8 hidden rounded-2xl border border-white/10 bg-slate-900 p-5 shadow-xl md:block">
+          <div className="absolute -bottom-8 -left-8 hidden rounded-2xl border border-white/10 bg-slate-900 p-5 shadow-xl xl:block">
             <Code2 className="mb-3 text-violet-400" size={28} />
             <p className="font-semibold text-white">{t('hero.cleanCode')}</p>
             <p className="text-sm text-slate-400">{t('hero.cleanCodeDescription')}</p>

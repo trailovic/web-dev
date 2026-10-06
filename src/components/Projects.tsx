@@ -49,7 +49,7 @@ export default function Projects() {
   return (
     <section id="projects" className="bg-slate-900 px-6 py-24">
       <div className="mx-auto max-w-7xl">
-        <div className="mb-14 flex flex-col justify-between gap-6 md:flex-row md:items-end">
+        <div className="mb-14 flex flex-col justify-between gap-6 xl:flex-row xl:items-end">
           <div>
             <p className="mb-3 font-semibold text-violet-400">
               {t('projects.eyebrow')}
@@ -72,10 +72,10 @@ export default function Projects() {
             return (
               <article
                 key={project.titleKey}
-                className="grid overflow-hidden rounded-3xl border border-white/10 bg-slate-950 shadow-2xl shadow-slate-950/40 lg:grid-cols-2"
+                className="grid overflow-hidden rounded-3xl border border-white/10 bg-slate-950 shadow-2xl shadow-slate-950/40 xl:grid-cols-2"
               >
                 <div
-                  className={`overflow-hidden bg-slate-950 p-4 ${index % 2 === 1 ? 'lg:order-2' : ''}`}
+                  className={`overflow-hidden bg-slate-950 p-4 ${index % 2 === 1 ? 'xl:order-2' : ''}`}
                 >
                   <div className="overflow-hidden rounded-2xl border border-white/10 bg-slate-900">
                     <div className="flex items-center gap-2 border-b border-white/10 px-4 py-3">
@@ -96,7 +96,7 @@ export default function Projects() {
                   </div>
                 </div>
 
-                <div className="flex flex-col justify-center p-8 md:p-10">
+                <div className="flex flex-col justify-center p-8 xl:p-10">
                   <h3 className="mb-4 text-3xl font-black text-white">{title}</h3>
 
                   <p className="mb-6 text-lg leading-8 text-slate-400">

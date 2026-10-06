@@ -7,8 +7,8 @@ export default function Footer() {
 
   return (
     <footer className="border-t border-white/10 bg-slate-950 px-6 py-10">
-      <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 md:flex-row">
-        <div className="text-center md:text-left">
+      <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 xl:flex-row">
+        <div className="text-center xl:text-left">
           <a
             href="#home"
             className="bg-linear-to-r from-violet-500 to-blue-500 bg-clip-text text-2xl font-black text-transparent"

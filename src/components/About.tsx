@@ -32,7 +32,7 @@ export default function About() {
       id="about"
       className="border-y border-white/10 bg-slate-950 px-6 py-24"
     >
-      <div className="mx-auto grid max-w-7xl gap-14 lg:grid-cols-2">
+      <div className="mx-auto grid max-w-7xl gap-14 xl:grid-cols-2">
         <div>
           <p className="mb-3 font-semibold text-violet-400">{t('about.eyebrow')}</p>
 
