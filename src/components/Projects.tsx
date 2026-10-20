@@ -26,12 +26,12 @@ const projects: {
     codeUrl: 'https://github.com/trailovic/jot-app.git',
   },
   {
-    titleKey: 'projects.fjord.title',
-    image: '/fjord-import.png',
-    descriptionKey: 'projects.fjord.description',
-    tags: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'Landing Page'],
+    titleKey: 'projects.klar.title',
+    image: '/klar.png',
+    descriptionKey: 'projects.klar.description',
+    tags: ['SvelteKit', 'Svelte 5', 'TypeScript', 'Tailwind CSS', 'Responsive Design'],
     liveUrl: 'https://fjordimport.vercel.app/',
-    codeUrl: 'https://github.com/trailovic/fjordimport.git',
+    codeUrl: 'https://github.com/trailovic/mock-business',
   },
   {
     titleKey: 'projects.ajvar.title',

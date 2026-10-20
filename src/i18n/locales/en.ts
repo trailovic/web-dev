@@ -57,8 +57,8 @@ const en = {
   'projects.it.description': 'A professional portfolio website built for showcasing IT support experience, technical skills, project work, and a downloadable résumé.',
   'projects.jot.title': 'Jot: A Notion Clone',
   'projects.jot.description': 'A productivity-focused Notion-style application for creating, organizing, and managing notes and documents with a modern user interface.',
-  'projects.fjord.title': 'Fjord Import Landing Page',
-  'projects.fjord.description': 'A clean Scandinavian-style landing page for an import company, focused on trust, services, product categories, and B2B lead generation.',
+  'projects.klar.title': 'Klar Regnskap Website',
+  'projects.klar.description': 'A modern, multi-page business website for a fictional Norwegian accounting firm. Built with SvelteKit, TypeScript, and reusable components, with a focus on accessibility, maintainability, and professional presentation.',
   'projects.ajvar.title': 'Ajvar — Family Recipe Hub',
   'projects.ajvar.description': 'A family recipe hub for creating, discovering, and sharing recipes through personal collections and collaborative kitchens.',
 

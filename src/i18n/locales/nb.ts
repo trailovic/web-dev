@@ -57,8 +57,8 @@ const nb = {
   'projects.it.description': 'En profesjonell porteføljenettside laget for å vise erfaring innen IT-support, tekniske ferdigheter, prosjektarbeid og en nedlastbar CV.',
   'projects.jot.title': 'Jot: En Notion-klone',
   'projects.jot.description': 'En produktivitetsfokusert applikasjon i Notion-stil for å opprette, organisere og administrere notater og dokumenter i et moderne brukergrensesnitt.',
-  'projects.fjord.title': 'Fjord Import-landingsside',
-  'projects.fjord.description': 'En ryddig landingsside i skandinavisk stil for et importselskap, med fokus på tillit, tjenester, produktkategorier og B2B-leadgenerering.',
+  'projects.klar.title': 'Klar Regnskap-nettside',
+  'projects.klar.description': 'En moderne, flersidig nettside for et fiktivt norsk regnskapsfirma. Utviklet med SvelteKit, TypeScript og gjenbrukbare komponenter, med fokus på tilgjengelighet, vedlikeholdbarhet og profesjonell presentasjon.',
   'projects.ajvar.title': 'Ajvar — familiens oppskriftsbase',
   'projects.ajvar.description': 'En oppskriftsbase for familien, laget for å opprette, oppdage og dele oppskrifter gjennom personlige samlinger og felles kjøkken.',
 
